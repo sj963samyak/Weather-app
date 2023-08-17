@@ -23,6 +23,13 @@ async function checkWeather(city) {
   } else if (data.weather[0].main == "Mist") {
     weatherIcon.src = "images/mist.png";
   }
+  else if (data.weather[0].main == "humidity") {
+    weatherIcon.src = "images/humidity.png";
+  }else if (data.weather[0].main == "snow") {
+    weatherIcon.src = "images/snow.png";
+  }else if (data.weather[0].main == "wind") {
+    weatherIcon.src = "images/wind.png";
+  }
   document.querySelector(".weather").style.display = "block";
 }
 searchBtn.addEventListener("click", () => {
